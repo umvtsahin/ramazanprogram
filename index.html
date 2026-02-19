@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Dashboard 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-shell">
+        <header class="main-header">
+            <div class="top-row">
+                <span class="location-tag">İSTANBUL • 2026</span>
+            </div>
+            <h1>Ramazan Paneli</h1>
+        </header>
+
+        <main class="scroll-content">
+            <div id="calendar-grid" class="calendar-grid">
+                </div>
+        </main>
+    </div>
+
+    <div id="detail-drawer" class="drawer-overlay">
+        <div class="drawer-sheet">
+            <div class="drag-handle" onclick="closeDrawer()"></div>
+            <div class="drawer-inner">
+                <div class="date-header">
+                    <h2 id="selected-date">-- --- ----</h2>
+                    <div id="vakit-vardiya" class="vardiya-pill">--</div>
+                </div>
+
+                <div class="time-cards">
+                    <div class="time-card">
+                        <label>İMSAK</label>
+                        <span id="vakit-imsak">--:--</span>
+                    </div>
+                    <div class="time-card iftar">
+                        <label>İFTAR</label>
+                        <span id="vakit-iftar">--:--</span>
+                    </div>
+                </div>
+
+                <div class="lessons-box">
+                    <h3>📚 Günün Ders Programı</h3>
+                    <div id="vakit-ders-listesi" class="lessons-list">
+                        </div>
+                </div>
+                
+                <button class="done-btn" onclick="closeDrawer()">Anladım</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

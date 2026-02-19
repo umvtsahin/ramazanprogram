@@ -1,13 +1,19 @@
 :root {
     --bg: #05070a;
     --surface: #12151a;
-    --accent: #f4c042;
+    --accent: #f4c042; /* Altın/Sarı (Bugün ve Detaylar) */
+    --special: #ff69b4; /* Pembe (Ortak İzin/Tatil) */
     --text: #ffffff;
     --text-dim: #9499a1;
     --border: rgba(255, 255, 255, 0.1);
 }
 
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; outline: none; }
+/* Genel Sıfırlama */
+* { 
+    box-sizing: border-box; 
+    -webkit-tap-highlight-color: transparent; 
+    outline: none; 
+}
 
 html, body {
     height: 100%;
@@ -19,14 +25,15 @@ html, body {
     overflow: hidden;
 }
 
+/* Ana Konteyner */
 .app-shell {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* iPhone çentiği gibi alanları korur */
-    padding-top: env(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top); /* Çentik desteği */
 }
 
+/* Üst Başlık Alanı */
 .main-header {
     padding: 24px 16px 12px;
     flex-shrink: 0;
@@ -44,36 +51,70 @@ html, body {
 
 h1 { font-size: 30px; margin: 10px 0 0; font-weight: 800; letter-spacing: -1px; }
 
+/* Takvim Kaydırma Alanı */
 .scroll-content {
     flex-grow: 1;
     overflow-y: auto;
-    padding: 10px 12px 100px; /* Alttan boşluk bırakıldı */
+    padding: 10px 12px 100px;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Takvim Izgarası - Ekrana Tam Sığdırma */
+/* Takvim Izgarası (7 Gün) */
 .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 gün yan yana */
-    gap: 6px; /* Boşluğu optimize ettim */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
 }
 
+/* Gün Hücreleri */
 .day-cell {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
-    min-height: 75px; /* Butonları büyüttüm */
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.1s ease;
+    position: relative;
+    transition: 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-.day-cell:active { transform: scale(0.92); background: #1c2128; border-color: var(--accent); }
-.day-cell.active { border-color: var(--accent); background: rgba(244, 192, 66, 0.15); box-shadow: 0 0 15px rgba(244, 192, 66, 0.1); }
+.day-cell:active { 
+    transform: scale(0.92); 
+    background: #1c2128; 
+}
+
+/* Bugünün Stili */
+.day-cell.active { 
+    border-color: var(--accent); 
+    background: rgba(244, 192, 66, 0.15); 
+    box-shadow: 0 0 15px rgba(244, 192, 66, 0.1);
+}
+
+/* ORTAK İZİN / ÖZEL GÜN STİLİ */
+.day-cell.special-day {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.15), rgba(18, 21, 26, 1));
+    border: 1.5px dashed var(--special);
+}
+
+.day-cell.special-day .day-num {
+    color: var(--special);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Özel gün kalbi */
+.day-cell.special-day::after {
+    content: '❤️';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 8px;
+}
+
 .day-cell.empty { border: none; background: transparent; }
 
+/* Yazı Tipleri */
 .day-name { font-size: 10px; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 2px; }
 .day-num { font-size: 22px; font-weight: 800; margin: 0; }
 .v-emoji { font-size: 16px; margin-top: 4px; }
@@ -83,7 +124,7 @@ h1 { font-size: 30px; margin: 10px 0 0; font-weight: 800; letter-spacing: -1px; 
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
@@ -97,7 +138,7 @@ h1 { font-size: 30px; margin: 10px 0 0; font-weight: 800; letter-spacing: -1px; 
     bottom: -100%;
     left: 0;
     width: 100%;
-    background: #181c22;
+    background: #161a20;
     border-top: 1px solid var(--border);
     border-radius: 32px 32px 0 0;
     padding: 16px 20px calc(24px + env(safe-area-inset-bottom));
@@ -109,20 +150,23 @@ h1 { font-size: 30px; margin: 10px 0 0; font-weight: 800; letter-spacing: -1px; 
 .drag-handle { width: 40px; height: 5px; background: var(--border); border-radius: 10px; margin: 0 auto 24px; }
 
 .date-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
-.date-header h2 { font-size: 22px; margin: 0; font-weight: 700; }
+.date-header h2 { font-size: 20px; margin: 0; font-weight: 700; color: #fff; }
 
 .vardiya-pill { background: rgba(244, 192, 66, 0.1); padding: 8px 14px; border-radius: 12px; font-size: 13px; font-weight: 700; color: var(--accent); }
 
+/* Vakit Kartları */
 .time-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
 .time-card { background: var(--bg); border: 1px solid var(--border); padding: 20px 10px; border-radius: 20px; text-align: center; }
 .time-card.iftar { border-color: var(--accent); }
-.time-card label { font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 6px; font-weight: 600; }
+.time-card label { font-size: 10px; color: var(--text-dim); display: block; margin-bottom: 6px; font-weight: 600; }
 .time-card span { font-size: 26px; font-weight: 800; color: var(--accent); }
 
+/* Ders Listesi */
 .lessons-box h3 { font-size: 15px; color: var(--text-dim); margin-bottom: 14px; font-weight: 700; }
-.lessons-list { max-height: 180px; overflow-y: auto; }
+.lessons-list { max-height: 200px; overflow-y: auto; }
 .lesson-item { background: rgba(255,255,255,0.04); padding: 14px; border-radius: 16px; margin-bottom: 10px; border-left: 4px solid var(--accent); }
 .lesson-item strong { display: block; font-size: 15px; margin-bottom: 2px; }
 .lesson-item small { color: var(--text-dim); font-size: 13px; }
 
-.done-btn { width: 100%; padding: 20px; background: var(--accent); color: #000; border: none; border-radius: 18px; font-weight: 800; font-size: 17px; margin-top: 12px; }
+/* Kapat Butonu */
+.done-btn { width: 100%; padding: 18px; background: var(--accent); color: #000; border: none; border-radius: 18px; font-weight: 800; font-size: 17px; margin-top: 12px; box-shadow: 0 4px 15px rgba(244, 192, 66, 0.2); }

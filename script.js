@@ -84,19 +84,31 @@ const dersProgrami = {
         {saat: "", ad: "Pazar - Tatil", hoca: ""}
     ],
     "2 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "09:30-10:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Public Health: Concept and Scope"},
+        {saat: "10:30-11:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Determinants of Health and Disease"},
+        {saat: "11:30-12:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Risk Groups in Public Health"}
     ],
     "3 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "09:30-10:15", ad: "Biophysics", hoca: "Esma Nur ZEYDANLI", detay: "Molecular biophysic research methods"},
+        {saat: "10:30-11:15", ad: "Biophysics", hoca: "Esma Nur ZEYDANLI", detay: "Oxidative stress"},
+        {saat: "11:30-12:15", ad: "Physiology", hoca: "Ozan TORAMAN", detay: "Water & Body Fluids Compartments (2/2)"}
     ],
     "4 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-11:15", ad: "Group D Anatomy LAB 3", hoca: "", detay: ""},
+        {saat: "11:30-12:15", ad: "Group D Anatomy LAB 3", hoca: "", detay: ""},
+        {saat: "13:30-14:15", ad: "Anatomy", hoca: "Gkionoul Nteli Chatzioglou", detay: "Joints of upper extremities I"},
+        {saat: "14:30-15:15", ad: "Anatomy", hoca: "Gkionoul Nteli Chatzioglou", detay: "Joints of upper extremities II"},
+        {saat: "15:30-16:15", ad: "Behavioral Sciences", hoca: "Esra SAVAŞ", detay: ""},
+        {saat: "16:30-17:15", ad: "Behavioral Sciences", hoca: "Esra SAVAŞ", detay: ""}
     ],
     "5 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-11:15", ad: "Medical Biology", hoca: "Bünyamin BULKURCUOĞLU", detay: "DNA Damage and DNA Repair"},
+        {saat: "11:30-12:15", ad: "Medical Biology", hoca: "Bünyamin BULKURCUOĞLU", detay: "Mendelian Genetics and Inheritance"},
+        {saat: "13:30-14:15", ad: "Anatomy", hoca: "Gkionoul Nteli Chatzioglou", detay: "Joints of lower extremities I"},
+        {saat: "14:30-15:15", ad: "Anatomy", hoca: "Gkionoul Nteli Chatzioglou", detay: "Joints of lower extremities I"}
     ],
     "6 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-12:15", ad: "Medical Skills Practice", hoca: "Mustafa YAZICIOĞLU", detay: "Group K - Classroom A211"}
     ],
     "7 Mart": [
         {saat: "", ad: "Cumartesi - Tatil", hoca: ""}
@@ -105,19 +117,28 @@ const dersProgrami = {
         {saat: "", ad: "Pazar - Tatil", hoca: ""}
     ],
     "9 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "09:30-10:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Understanding Society: Demography and Health"},
+        {saat: "10:30-11:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Understanding Society: Demography and Health"},
+        {saat: "11:30-12:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Medical Research Method: Epidemiology and Social Diagnosis"},
+        {saat: "13:30-14:15", ad: "Anatomy", hoca: "Gkionoul Nteli Chatzioglou", detay: "Functional Anatomy of the Head-Neck and Trunk"},
+        {saat: "14:30-15:15", ad: "Anatomy", hoca: "Gkionoul Nteli Chatzioglous", detay: "Functional Anatomy of upper and lower extremities"}
     ],
     "10 Mart": [
-        {saat: "", ad: "Pazar - Tatil", hoca: ""}
+        {saat: "10:30-11:15", ad: "Biophysics", hoca: "Esma Nur ZEYDANLI", detay: "Bioenergetics of aging"},
+        {saat: "11:30-12:15", ad: "Biophysics", hoca: "Esma Nur ZEYDANLI", detay: "New approaches to the problem of cancer"}
     ],
     "11 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-11:15", ad: "Anatomy LAB 3", hoca: "", detay: "Group C"},
+        {saat: "11:30-12:15", ad: "Anatomy LAB 4", hoca: "", detay: "Group C"},
+        {saat: "13:30-15:15", ad: "Tıbbi Biyoloji Uygulama (SC112)", hoca: "", detay: "Grup E"}
     ],
     "12 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-11:15", ad: "Medical Biology", hoca: "Bünyamin BULKURCUOĞLU", detay: "Signaling Pathways"},
+        {saat: "11:30-12:15", ad: "Medical Biology", hoca: "Bünyamin BULKURCUOĞLU", detay: "Signaling Pathways"},
+        {saat: "13:30-15:15", ad: "Histoloji Uygulama 1", hoca: "", detay: "Grup D (SC110)"}
     ],
     "13 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "", ad: "Cuma - Ders Yok", hoca: "", detay: ""}
     ],
     "14 Mart": [
         {saat: "", ad: "Cumartesi - Tatil", hoca: ""}
@@ -126,16 +147,25 @@ const dersProgrami = {
         {saat: "", ad: "Pazar - Tatil", hoca: ""}
     ],
     "16 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+	{saat: "09:30-10:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Health Promotion - Health Education - Health Literacy"},
+        {saat: "10:30-11:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Health Promotion - Health Education - Health Literacy"},
+        {saat: "11:30-12:15", ad: "Public Health", hoca: "Birol TİBET", detay: "Health Behavior Models"},
+        {saat: "13:30-15:15", ad: "Histoloji Uygulama 1", hoca: "", detay: "Grup E (SC110)"}
     ],
     "17 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-11:15", ad: "Physiology", hoca: "Ozan TORAMAN", detay: "Transport of substances across cell membrane (1/2)"},
+        {saat: "11:30-12:15", ad: "Physiology", hoca: "Ozan TORAMAN", detay: "Transport of substances across cell membrane (2/2)"},
+        {saat: "13:30-14:15", ad: "Medical Biology", hoca: "Bünyamin BULKURCUOĞLU", detay: "Autosomal Dominant and Recessive Inheritance "},
+        {saat: "14:30-15:15", ad: "Medical Biology", hoca: "Bünyamin BULKURCUOĞLU", detay: "Gonosomal Chromosomes and Inheritance - X Chromosome Inactivation "}
     ],
     "18 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "10:30-11:15", ad: "Group D - Anatomy LAB 5", hoca: "", detay: ""},
+        {saat: "11:30-12:15", ad: "Group D - Anatomy LAB 6", hoca: "", detay: ""},
+        {saat: "13:30-14:15", ad: "Group C - Anatomy LAB 5", hoca: "", detay: ""},
+        {saat: "14:30-15:15", ad: "Group C - Anatomy LAB 6", hoca: "", detay: ""}
     ],
     "19 Mart": [
-        {saat: "", ad: "", hoca: "", detay: ""}
+        {saat: "", ad: "Perşembe - Arife - Ders Yok", hoca: "", detay: ""}
     ]
 
 
@@ -153,6 +183,8 @@ const overlay = document.getElementById('detail-drawer');
 const start = new Date(2026, 1, 19);
 const padding = start.getDay() === 0 ? 6 : start.getDay() - 1;
 
+const ozelGunler = ["23 Şubat", "1 Mart", "7 Mart", "13 Mart", "19 Mart"];
+
 for (let p = 0; p < padding; p++) {
     const empty = document.createElement('div');
     empty.className = 'day-cell empty';
@@ -167,6 +199,10 @@ for (let i = 0; i < 29; i++) {
 
     const cell = document.createElement('div');
     cell.className = 'day-cell';
+
+    if (ozelGunler.includes(dateKey)) {
+        cell.classList.add('special-day');
+}
     
     const today = new Date();
     if(today.getDate() === d.getDate() && today.getMonth() === d.getMonth()) cell.classList.add('active');
@@ -176,7 +212,7 @@ for (let i = 0; i < 29; i++) {
                       <span class="v-emoji">${v.emoji}</span>`;
 
     cell.onclick = () => {
-        document.getElementById('selected-date').innerText = dateKey;
+        document.getElementById('selected-date').innerText = d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' });
         document.getElementById('vakit-imsak').innerText = imsakiye[dateKey]?.imsak || "--:--";
         document.getElementById('vakit-iftar').innerText = imsakiye[dateKey]?.iftar || "--:--";
         document.getElementById('vakit-vardiya').innerText = `${v.emoji} ${v.ad}`;

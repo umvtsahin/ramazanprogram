@@ -1,0 +1,15 @@
+{
+  "short_name": "Ramazan Ajandası",
+  "name": "Ramazan Ajandası",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#05070a",
+  "background_color": "#05070a"
+}
